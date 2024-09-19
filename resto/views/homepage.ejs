@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>homepage</title>
+    <link rel="stylesheet" href="basic.css">
+  </head>
+  <body>
+    
+    <header id="nav-div" >
+      <div>
+      <nav id="navigation">
+        <% let names = ['Home','Menu','Reservation','Location','Order']; %>
+        <% let links = ['#','/items/menu','/items/reservation','#location','/items/breakfast']; %>
+        <% let name = 0 ; %>
+        <% let link = 0 ; %>
+        <% for(let i = 0; i < icons.length; i++) { %> 
+          <% let ico = icons[i]; %>
+        <a href="<%= links[link] %>"> <img src="data:image/png;base64, <%= ico.icon %>" alt="<%=i.info%>" class="links" /><%= names[name] %></a>
+          <% name++ %>
+          <% link++ %>
+        <% }; %>
+      </nav><a href="/logout" id="logout">Log out</a>
+       <h1>SLAVIC GUSH RESTAURANT</h1>    
+      </div>
+    </header>
+
+    <div id="main">
+      <div id="pastries">
+        <% wallpapers.forEach((wallpaper) => { %>
+          <img src="data:image/jpg;base64, <%= wallpaper.wallpaper %>" alt="" />
+       <% }); %>
+      </div>
+
+      <div id="floor" class="order">
+        <img src="data:image/jpg;base64, <%= background.background %>" alt="">
+        <p>YOUR DELICACIES</p>
+        <p id="delivery">TAKEAWAY & DELIVERIES</p>
+        <a href="/items/breakfast">Order Online</a>
+      </div>
+
+      <footer id="footer">
+        <div id="bottom">
+          <p id="grab">COME GRAB YOUR DELICACIES!..</p>
+
+          <div id="location">
+            <div>KISUMU NDOGO</div>
+            <div>Monday - Friday : 5am - 10pm</div>
+            <div>Saturday and SUNDAY : 24/7</div>
+            <div>Tel:<a href="tel:0713490162">026-945-8390</a></div>
+            <div>
+              Email:<a href="mailto:slavicgush0@gmail.com">info@gushrestaurant.com</a>
+            </div>
+          </div>
+
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3094.182302587986!2d34.77454101601269!3d-0.6709603779099461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b3c092521a291%3A0x452a145a63cec162!2sUfanisi%20Resorts!5e0!3m2!1sen!2ske!4v1694934389242!5m2!1sen!2ske"
+              width="300"
+              height="200"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div id="socialmedia">
+            <% let ids = ['twitter','instagram','facebook','github']; %>
+            <% let hreflinks = ['//twitter.com/slaviangush?s=09','https://www.instagram.com/invites/contacts/?i=nn61jlgdj8np&utm_content=3ul9q7f','https://www.facebook.com/100023124374620/posts/pfbid02QxpftMG1PizvmGm1butKpfWNqDBApqqosCpa1PVD6hNP63k21VhPQ3HNmRGJfnQYl/?app=fbl','//twitter.com/slaviangush?s=09']; %>
+            <% let id = 0 ; %>
+            <% let hreflink = 0 ; %>
+
+            <% sicon.forEach((con) => { %>
+              <a id="<%= ids[id] %>" href="<%= hreflinks[hreflink] %>" > <img src="data:image/svg+xml;base64, <%= con.sicon %>" alt="" /> </a>
+              <% id++ %>
+              <% hreflink++ %>
+           <% }); %>
+          </div>
+        </div>
+      </footer>
+      </div>
+  </body>
+</html>

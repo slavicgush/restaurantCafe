@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu</title>
+  <link rel="stylesheet" href="/menu.css">
+</head>
+<body>
+  <% const items = allMenu; %>
+  <% for (let i = 0; i < items.length; i++) { %>
+    <% const category = items[i].category; %>
+      <h2 id="namesection"><%= category.charAt(0).toUpperCase() + category.slice(1) %> Section</h2>  <a href="/items/breakfast" id="online">Order Online</a>
+      <div id="menu">
+        <% while (i < items.length && items[i].category === category) { %>
+          <section class="dish">
+          <h2><%= items[i].name %></h2>
+          <p class="photo"><img src="data:image/jpg;base64, <%= items[i].image %>" alt="<%=items[i].name %>" /> </p>
+            <p class="info"><%= items[i].info %></p>
+            <p class="price">Ksh <%= items[i].price %></p>
+            </section>
+          <% i++; %>
+        <% } %>
+    </div>
+  <% } %>
+</body>
+</html>

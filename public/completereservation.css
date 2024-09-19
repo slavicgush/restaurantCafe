@@ -1,0 +1,52 @@
+body{
+    background-color: white;
+    font-family: Georgia, serif;
+}
+h1{
+    line-height: 2em;
+    font-size: 2em;
+   margin-left: 10%;
+    margin-bottom: 0%;
+    
+}
+
+fieldset{
+    background-color: aliceblue;
+}
+fieldset label, input{
+    margin-left: 5%;
+      
+    /* margin: 3% 4%; */
+}
+input[type*="checkbox"]{
+    margin-left: 0;
+    font-size: large;
+}
+input[type*="submit"]{
+    font-size: .9em;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    height: 5%;
+}
+input[type*="submit"]:hover{
+color: black;
+background-color: white;
+
+}
+p,span{
+    font-size: large;
+}
+
+#submission{
+    margin-left: 10%;
+     width: 70%;
+
+}
+#info{
+        margin-left: 7%;
+        color: red;
+}  
+#requestinput{
+margin-left: 20%;
+}

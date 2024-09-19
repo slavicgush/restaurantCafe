@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Items</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/style.js"></script>
+</head>
+<body>
+  <div id="layout">
+    <div id="header">
+<% let names = ['Breakfast','Softdrinks','Lunch','Dinner','Kienyeji Classics']; %>
+<% let links = ['/items/breakfast','/items/softdrinks','/items/lunch','/items/dinner','/items/Kienyeji']; %>
+    <% for(let i = 0; i < icons.length; i++) { %> 
+      <% let ico = icons[i]; %>
+      <% var li = links[i] %> 
+    <a href=" <%= li%>" class="meal" data-target="<%= li %>" >  <img src="data:image/png;base64, <%= ico.icon %>" alt="<%=i.info%>" /><%= names[i] %></a>
+    <% }; %>
+    <div id="home"><a href="/items">Back to Home</a></div>
+    </div>
+    <div id="menu">
+      <h3>Menu</h3>
+      <% menu.forEach( men =>{ %>
+         <a href="<%=li%>/<%=men.id %>" class="menu-link"> <%=men.name%> </a> <br> <br>
+         <% }); %> 
+    </div>
+    <div id="main">
+      <% item.forEach( tem =>{ %>
+        <div id="image"><img src="data:image/jpg;base64, <%= tem.image %>" alt="" /> </div>
+        <div id="foodname"><%=tem.name%></div>
+        <div id="info"><%=tem.info%></div>
+        <div id="pricediv">Ksh <div id="price"><%=tem.price%></div></div> 
+        <% }); %>
+    </div>
+    <div id="paymentModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Your Cart</h2>
+        <div id="modalTotal"></div>
+        <div id="modalCartItems"></div>
+        <div>
+          <button id="confirmPayment">Confirm</button>
+          <button id="cancelPayment">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="thankYouModal">
+      <div id="thankYouContent">
+        <h2>Thank You!</h2>
+        <p id="thankspara">Your order has been received successfully.You'll get a confirmation message by email shortly.</p>
+        <div id="progressBarContainer">
+          <div id="progressBar"></div>
+        </div>
+      </div>
+    </div>
+    <div id="yourOrder">
+      <h1 >Your Cart</h1> <h2 id="total"></h2>
+      <div id="cartitems"></div><span id="itemprice"></span> 
+    </div>
+    <div id="footer">
+      <div class="order"  id="addtocart">Add to Cart</div>
+      <div class="order" id="removeorder">Remove Order</div>
+      <div class="order" id="clearorder">Clear Order</div>
+      <div id="pay">Proceed to Payment</div>
+    </div>
+  </div> 
+</body>
+</html>

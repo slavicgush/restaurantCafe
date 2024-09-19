@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve Now</title>
+    <link rel="stylesheet" href="/completereservation.css" />
+    <script src="/completereservation.js"></script>
+  </head>
+  <body>
+    <h1>COMPLETE YOUR RESERVATION</h1>
+    <div id="submission">
+      <form action="/lo" id="form">
+        <fieldset>
+          <legend>Please fill in your details:</legend>
+          <label for="fname" id="fname"
+            >First name<br /><input type="text" id="fnameInput"
+          /></label>
+          <br />
+          <label for="lname" id="lname"
+            >Last name <br /><input type="text" id="lnameInput"
+          /></label>
+          <br />
+          <label for="number" id="number"
+            >Phone number <br /><input type="tel" id="numberInput"
+          /></label>
+          <br />
+          <label for="email" id="email"
+            >Email address <br /><input type="email" id="emailInput"
+          /></label>
+          <br />
+          <label for="request" id="request"
+            >Any special requests? <br />
+            <input type="text" id="requestInput"
+          /></label>
+
+          <br />
+        </fieldset>
+        <p>
+          Thank you for choosing our restaurant. Please note that we will hold
+          your table for up to 15 minutes from the time of your reservation. If
+          your plans change or you anticipate being late, kindly let us know as
+          soon as possible. We look forward to hosting you!
+        </p>
+        <input type="checkbox" /><span
+          >I agree to receive emails from the restaurant about new offers,
+          updates and other promotional content.</span
+        >
+        <br /><br /><br />
+        <div id="info"></div>
+        <input type="submit" id="submit" value="Complete Reservation" />
+      </form>
+    </div>
+  </body>
+</html>

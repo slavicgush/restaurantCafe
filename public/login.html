@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      input {
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .error {
+        color: red;
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <form action="/login" method="post" id="loginForm">
+        <h2>Login</h2>
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" autofocus />
+          <span class="error" id="usernameError"></span>
+        </div>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+          <span class="error" id="passwordError"></span>
+        </div>
+        <button type="submit" id="loginButton">
+          Login
+        </button>
+        <div class="input-group">
+          <label for="account">Don't have account?</label>
+          <a href="#" id="createOne"
+            >Create one</a
+          >
+        </div>
+      </form>
+
+      <!-- Create Account Form (Initially Hidden) -->
+      <form
+        action="/createaccount"
+        method="post"
+        id="createAccountForm"
+        style="display: none"
+      >
+        <h2>Create Account</h2>
+        <div class="input-group">
+          <label for="newUsername">New Username:</label>
+          <input type="text" id="newUsername" name="newUsername" autofocus />
+          <span class="error" id="newUsernameError"></span>
+        </div>
+        <div class="input-group">
+          <label for="newPassword">New Password:</label>
+          <input type="password" id="newPassword" name="newPassword" />
+          <span class="error" id="newPasswordError"></span>
+        </div>
+        <input type="hidden" name="formType" value="createAccount" />
+        <button
+          type="submit"
+          id="createAccount"
+        >
+          Create Account
+        </button>
+      </form>
+    </div>
+
+    <script>
+      const loginButton = document.getElementById("loginButton");
+      const createOne = document.getElementById("createOne");
+      const createAccount = document.getElementById("createAccount");
+      loginButton.addEventListener("click", (event) => {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let usernameError =  document.getElementById("usernameError");
+        let passwordError = document.getElementById("passwordError");
+        if (username === "") {
+          usernameError.innerHTML ="Invalid username";
+          setTimeout(() => {
+            usernameError.innerHTML ="";
+          }, 2000);
+          event.preventDefault();
+        } else if (password === "") {
+          passwordError.innerHTML ="Invalid password";
+          setTimeout(() => {
+            passwordError.innerHTML ="";
+          }, 2000);
+          event.preventDefault();
+        } else {
+          //go where needed
+        }
+      });
+
+      createOne.addEventListener("click", (event) => {
+        // Hide the login form
+        document.getElementById("loginForm").style.display = "none";
+        // Show the create account form
+        document.getElementById("createAccountForm").style.display = "block";
+      });
+
+      createAccount.addEventListener("click", (event) => {
+        let newUsername = document.getElementById("newUsername").value;
+        let newPassword = document.getElementById("newPassword").value;
+        let newUsernameError = document.getElementById("newUsernameError");
+        let newPasswordError = document.getElementById("newPasswordError");
+        if (newUsername === "") {
+            newUsernameError.innerHTML ="Invalid username";
+            setTimeout(() => {
+                newUsernameError.innerHTML ="";
+          }, 2000);
+          event.preventDefault();
+        } else if (newPassword === "") {
+            newPasswordError.innerHTML ="Invalid password";
+            setTimeout(() => {
+                newPasswordError.innerHTML ="";
+          }, 2000);
+          event.preventDefault();
+        } else {
+          // Add the following line to set the form type
+          document
+            .getElementById("createAccountForm")
+            .querySelector('input[name="formType"]').value = "createAccount";
+
+          // Submit the form
+          document.getElementById("createAccountForm").submit();
+        }
+      });
+
+    </script>
+  </body>
+</html>

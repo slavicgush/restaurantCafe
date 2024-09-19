@@ -1,0 +1,248 @@
+
+
+body{
+    background-color:white;
+    font-family: Georgia, serif;
+    font-size: 100%;
+    margin-top: 0;
+
+}
+#nav-div{
+    text-align: center;
+    background-size: cover;  
+    position: sticky;
+    top: 0;
+}
+#main{
+    position: static;
+}
+h1{
+    text-align: center;
+    color: #2c3e50;
+    line-height: 1em;
+    font-size: 3.5em;
+    font-family: 'Nosifer', cursive;   
+}
+h1 img{
+    width: 40px;
+    height: 40px;
+}
+#navigation img{
+    width: 20px;
+    height: 20px;
+}
+header nav a{
+    display:  inline-block;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: .5em 2em;
+    margin-left: 2%;
+    margin-top: 1%; 
+    text-decoration: none;
+    font-weight: bold;   
+}
+nav a:link{
+    color: #445;
+    background-color: #fc7;
+}
+ nav a:visited{
+    color: #445;
+    background-color: #eb6;
+}
+nav a:hover{
+    color:#667;
+    font-weight: bold;
+}
+#pastries img{
+    width: 275px;
+    height: 183px;
+}
+#main{
+    background-color: white;
+}
+#nav-div{
+    background-color:#71d0c5 ;
+}
+#floor{
+    height: 600px;
+    background-color: #3498db ;
+    background-size: cover;
+    /* background-image: url('../images/burgers-1200.jpg'); */
+    text-align: center;
+    margin-bottom: 2%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+/* #floor img{
+    width: 100%;
+} */
+
+
+#pastries{
+    /* display: inline-block; */
+    padding-top: .9em;
+    padding-bottom: .9em;
+    background-color: #2c3e50;
+    /* border: 1px solid black; */
+    display: flex;
+    flex: auto; 
+    flex-direction: row;
+    justify-content: center;
+    /*align-items: center; */
+    flex-wrap: wrap;
+    /*background-image: url(../images/wallpaper1.jpg);
+   /* background-repeat: no-repeat;  */
+    /* background-position: center ; */
+    /* margin-top: 10px; */
+    /* background-size: cover; */
+    /* background-image: url(../images/burgers-1200.jpg); */
+
+}
+.order{
+    font-size: 1.5em;
+    color: yellow;
+    line-height: 1.8em;
+    letter-spacing: .5em;
+    font-family: 'Nosifer', cursive; 
+
+}
+#delivery{
+    line-height: 1em;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.order a{
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    padding: .2em .9em;
+    /* margin-top: 10%; */
+    letter-spacing: normal;
+}
+.order a:hover{
+    background-color: black;
+    color: white;
+}
+ #wallpaper5{
+    width: 200;
+} 
+/* #wallpaper2{
+    margin-right: 20%;
+}
+#wallpaper3{
+    margin-left: 5%;
+}
+#wallpaper4{
+    margin-right: 20%;
+} */
+#bottom{
+    /* border: 1px solid black; */
+    /* position: absolute; */
+    /* bottom: 20px; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    /* background-color: rgba(138, 109, 109, 0.781); */
+    background-color: #0c1b24;
+    font-family: verdana, sans-serif; 
+    color:  #EADDC4;
+    margin-top: 2%;
+    
+}
+footer img{
+    width: 40px;
+    height: 40px;
+    margin-left: 2%; 
+}
+footer a{
+    color:white;
+}
+@keyframes colors{
+    0%{
+        background-color: red;
+    }
+    10%{
+        background-color: green;
+    }
+    20%{
+        background-color: orange;
+    }
+    30%{
+        background-color: maroon;
+    }
+    40%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: silver;
+    }
+    60%{
+        background-color: blue;
+    }
+    70%{
+        background-color: gold;
+    }
+    80%{
+        background-color: blueviolet;
+    }
+    90%{
+        background-color: white;
+    }
+    100%{
+        background-color: purple;
+    }
+}
+#grab{
+    animation: colors 5s ease infinite alternate;
+}
+#grab{
+    display: inline-block;
+    margin-left: 50px;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: white;
+    border: thin solid maroon;
+    border-radius: .9em;
+    padding: .2em .5em;
+}
+#location{
+    margin-left: 2%;
+    font-size: large;
+    color: white;
+}
+#location div a{
+    text-decoration: none;
+}
+#socialmedia{
+    /* position: relative; */
+    text-align: center;
+    /* margin-bottom: 10%; */
+}
+#map{
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    /* filter: invert(100%); */
+   /*  float: right;
+    margin-right: 45%;
+    position: relative;
+    bottom: 38%;
+    width: 50px;
+    height: 50px;
+     */
+}
+#logout{
+    text-align: right;
+    margin-left: 90%;
+    display: inline;
+    text-decoration: none;
+    font-size: larger;
+    margin-bottom: 0;
+    margin-top: -20px;
+
+}
+ 

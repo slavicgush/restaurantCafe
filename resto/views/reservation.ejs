@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Reservation</title>
+      <link rel="stylesheet" href="/reservation.css" />
+      <script src="/reservation.js"></script>
+    </head>
+    <body>
+      <h1>MAKE A RESERVATION</h1>
+      <P
+        >To help us find the best table for you, select the preferred size,date
+        and time.</P
+      >
+      <form action="/items/completereservation" method="get" id="reservationForm">
+    <div id="manage">
+      <div class="reserve">
+        <span>Party size </span> <br />
+        <select name="partySize" id="partySize">
+          <option value="1">1 guest</option>
+          <option value="2">2 guests</option>
+          <option value="3">3 guests</option>
+          <option value="4">4 guests</option>
+          <option value="5">5 guests</option>
+          <option value="6">6 guests</option>
+        </select>
+      </div>
+
+      <div class="reserve">
+        <label for="date"
+          >Date <br />
+          <input type="date" id="date"  name="reservationDate" />
+        </label>
+      </div>
+      <div class="reserve">
+        <label for="time"
+          >Time <br />
+          <input type="time" id="time" name="reservationTime" />
+        </label>
+      </div>
+   
+    </div>
+
+    <table>
+      <caption>
+        Choose an available slot
+      </caption>
+      <tr>
+        <td>9:30 PM</td>
+        <td>9:45 PM</td>
+        <td>10:00 PM</td>
+        <td>10:15 PM</td>
+        <td>10:30 PM</td>
+      </tr>
+      <tr>
+        <td>10:45 PM</td>
+        <td>11:00 PM</td>
+        <td>11:15 PM</td>
+        <td>11:30 PM</td>
+        <td>11:45 PM</td>
+      </tr>
+      <tr>
+        <td>12:00 AM</td>
+        <td>12:15 AM</td>
+        <td>12:30 AM</td>
+        <td>12:45 AM</td>
+        <td>1:00AM</td>
+      </tr>
+    </table>
+    <div id="alert"></div>
+    <div id="link">
+      <button type="submit" id="submit">RESERVE NOW</button>
+     </div>
+  </form>
+    <footer>
+      <div id="mail">
+        <span>Join Our Mailing List </span> <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter email here"
+          required
+        />
+        <br />
+        <a href="#">Subscribe Now</a>
+      </div>
+    </footer>
+  </body>
+</html>
